@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondVC: UIViewController {
+final class SecondVC: UIViewController {
     
     var saveDataDelegate: SaveDataDelegate?
     
@@ -31,7 +31,8 @@ class SecondVC: UIViewController {
     }
     
     @IBAction private func saveDidTap() {
-        saveDataDelegate?.addPersonToArray(name: nameLabel.text!, surname: surnameLabel.text!)
+        guard let name = nameLabel.text, let surname = surnameLabel.text else { return }
+        saveDataDelegate?.addPersonToArray(name: name, surname: surname)
         dismiss(animated: true)
         
     }

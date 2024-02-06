@@ -7,10 +7,10 @@
 
 import UIKit
 
-class PersonTableViewCell: UITableViewCell {
+final class PersonTableViewCell: UITableViewCell {
     
     static let identifire = "PersonTableViewCell"
     
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var surnameLabel: UILabel!
+    @IBOutlet private var nameLabel: UILabel!
+    @IBOutlet private var surnameLabel: UILabel!
 }

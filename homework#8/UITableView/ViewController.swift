@@ -12,10 +12,10 @@ final class ViewController: UIViewController {
     let mainStoryboardName = "Main"
     let secondVCId = "SecondVC"
     
-    var data = [String]()
-    var keys = [Character]()
-    var values = [[String]]()
-    var contacts = [Character: [String]]()
+    private var data = [String]()
+    private var keys = [Character]()
+    private var values = [[String]]()
+    private var contacts = [Character: [String]]()
     
     @IBOutlet private weak var tableView: UITableView!
     
