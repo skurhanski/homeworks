@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Student InfoVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="StudentInfoVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="StudentInfoVC" customModule="homework_9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ts-US-0Gg">
+                                <rect key="frame" x="16" y="75" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsi-yq-MJJ">
+                                <rect key="frame" x="16" y="116" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teacher:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmM-UX-nWh">
+                                <rect key="frame" x="16" y="157" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nug-Jf-Z32">
+                                <rect key="frame" x="74" y="75" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzf-yj-heM">
+                                <rect key="frame" x="59" y="116" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not selected yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96q-q1-T7l">
+                                <rect key="frame" x="90" y="157" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Rsi-yq-MJJ" firstAttribute="top" secondItem="3ts-US-0Gg" secondAttribute="bottom" constant="20" id="3xS-de-vxz"/>
+                            <constraint firstItem="qmM-UX-nWh" firstAttribute="top" secondItem="Rsi-yq-MJJ" secondAttribute="bottom" constant="20" id="47j-Gh-0Hb"/>
+                            <constraint firstItem="96q-q1-T7l" firstAttribute="top" secondItem="Bzf-yj-heM" secondAttribute="bottom" constant="20" id="6hg-PR-InG"/>
+                            <constraint firstItem="qmM-UX-nWh" firstAttribute="leading" secondItem="Rsi-yq-MJJ" secondAttribute="leading" id="B3N-Gf-q3d"/>
+                            <constraint firstItem="Nug-Jf-Z32" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="CX8-NR-orJ"/>
+                            <constraint firstItem="3ts-US-0Gg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="NYf-IG-160"/>
+                            <constraint firstItem="3ts-US-0Gg" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="S0i-jW-Tcf"/>
+                            <constraint firstItem="Bzf-yj-heM" firstAttribute="leading" secondItem="Rsi-yq-MJJ" secondAttribute="trailing" constant="8" symbolic="YES" id="m5M-4q-D44"/>
+                            <constraint firstItem="Rsi-yq-MJJ" firstAttribute="leading" secondItem="3ts-US-0Gg" secondAttribute="leading" id="nbR-14-28d"/>
+                            <constraint firstItem="Bzf-yj-heM" firstAttribute="top" secondItem="Nug-Jf-Z32" secondAttribute="bottom" constant="20" id="nkg-EN-DUa"/>
+                            <constraint firstItem="Nug-Jf-Z32" firstAttribute="leading" secondItem="3ts-US-0Gg" secondAttribute="trailing" constant="8" symbolic="YES" id="ooR-za-RLX"/>
+                            <constraint firstItem="96q-q1-T7l" firstAttribute="leading" secondItem="qmM-UX-nWh" secondAttribute="trailing" constant="8" symbolic="YES" id="qt1-rX-MQn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ageLabel" destination="Bzf-yj-heM" id="QVZ-GO-DOG"/>
+                        <outlet property="nameLabel" destination="Nug-Jf-Z32" id="MEE-lp-W8Q"/>
+                        <outlet property="teacherLabel" destination="96q-q1-T7l" id="TJD-83-moZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
