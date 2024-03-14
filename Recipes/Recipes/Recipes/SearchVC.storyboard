@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SearchVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SearchVC" id="Y6W-OH-hqX" customClass="SearchVC" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1G-RJ-gFF">
+                                <rect key="frame" x="150.33333333333334" y="123" width="92.333333333333343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" placeholder="Type meal for search" translatesAutoresizingMaskIntoConstraints="NO" id="QSO-Qs-3Nx">
+                                <rect key="frame" x="0.0" y="172" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="name"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="a5I-BP-0wH"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jyq-rJ-XxY">
+                                <rect key="frame" x="0.0" y="228" width="393" height="555"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO0-se-b8J">
+                                <rect key="frame" x="158" y="783" width="77" height="35"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                <connections>
+                                    <action selector="closeDidTap" destination="Y6W-OH-hqX" eventType="touchUpInside" id="U2v-zY-jF0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oO0-se-b8J" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="0v9-Cv-yzJ"/>
+                            <constraint firstItem="QSO-Qs-3Nx" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="5ac-cf-0E0"/>
+                            <constraint firstItem="oO0-se-b8J" firstAttribute="top" secondItem="Jyq-rJ-XxY" secondAttribute="bottom" id="704-gE-kIe"/>
+                            <constraint firstItem="QSO-Qs-3Nx" firstAttribute="top" secondItem="e1G-RJ-gFF" secondAttribute="bottom" constant="28" id="D5b-fR-hVf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jyq-rJ-XxY" secondAttribute="trailing" id="Ddx-yL-jwh"/>
+                            <constraint firstItem="Jyq-rJ-XxY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="HB4-t9-AmQ"/>
+                            <constraint firstItem="Jyq-rJ-XxY" firstAttribute="top" secondItem="QSO-Qs-3Nx" secondAttribute="bottom" id="Nci-iZ-0YN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="oO0-se-b8J" secondAttribute="bottom" id="UWa-8P-pq6"/>
+                            <constraint firstItem="QSO-Qs-3Nx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="cML-77-epw"/>
+                            <constraint firstItem="e1G-RJ-gFF" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="mo9-Da-YDD"/>
+                            <constraint firstItem="e1G-RJ-gFF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="xd1-72-oNL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4dJ-qf-Mj7"/>
+                    <connections>
+                        <outlet property="searchField" destination="QSO-Qs-3Nx" id="AEL-dF-vSC"/>
+                        <outlet property="tableView" destination="Jyq-rJ-XxY" id="3Q4-PE-ndc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2919.8473282442746" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rag-I2-mLO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XQ1-pj-ezc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="d7c-hR-HEa">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="j9e-PY-dkD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vbr-Vd-ciY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1993.1297709923663" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
